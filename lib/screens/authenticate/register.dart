@@ -129,7 +129,7 @@ class _RegisterState extends State<Register> {
                             if (val == null || val.isEmpty) {
                               return 'Enter a password';
                             }
-                            if (val.length<6) {
+                            if (val.length < 6) {
                               return 'Password must be at least 8 characters';
                             }
                             return null;
@@ -183,8 +183,10 @@ class _RegisterState extends State<Register> {
                               debugPrint(password);
                               dynamic result = await _auth
                                   .registerWithEmailAndPassword(
+                                    username,
                                     email,
                                     password,
+                                    phone,
                                   );
                               if (result == null) {
                                 setState(() {

@@ -3,9 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:straysave/services/auth.dart';
 import 'package:straysave/models/user.dart' as suser;
-import 'package:straysave/services/database.dart';
 
-class MockDatabaseService extends Mock implements DatabaseService {}
+import 'screens/scan_test.dart';
 
 class MockFirebaseAuth extends Mock implements fb.FirebaseAuth {}
 
